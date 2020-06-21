@@ -121,16 +121,12 @@ DOMAIN-SUFFIX, lu.sogoucdn.com
 DOMAIN-SUFFIX, theta.sogoucdn.com
 DOMAIN-SUFFIX, uranus.sogou.com
 
-DOMAIN-SUFFIX, afp.pplive.com
-DOMAIN-SUFFIX, app.aplus.pptv.com
-DOMAIN-SUFFIX, as.aplus.pptv.com
-DOMAIN-SUFFIX, asimgs.pplive.cn
-DOMAIN-SUFFIX, de.as.pptv.com
-DOMAIN-SUFFIX, jp.as.pptv.com
-DOMAIN-SUFFIX, pp2.pptv.com
-DOMAIN-SUFFIX, stat.pptv.com
-DOMAIN-SUFFIX, static.g.pptv.com
-URL-REGEX, https?://img\w.g.pptv.com
+DOMAIN-SUFFIX, deliver.ifeng.com
+DOMAIN-SUFFIX, hxjs.tool.hexun.com
+DOMAIN-SUFFIX, hxsame.hexun.com
+DOMAIN-SUFFIX, itv.hexun.com
+DOMAIN-SUFFIX, utrack.hexun.com
+URL-REGEX, https?://h\w{2}.hxsame.hexun.com
 
 DOMAIN-SUFFIX, ad.video.51togic.com
 DOMAIN-SUFFIX, biz5.kankan.com
@@ -171,6 +167,7 @@ DOMAIN-SUFFIX, traffic.uusee.com
 DOMAIN-SUFFIX, union.6.cn
 DOMAIN-SUFFIX, wa.gtimg.com
 DOMAIN-SUFFIX, bfshan.cn
+
 
 DOMAIN-KEYWORD, admaster
 DOMAIN-KEYWORD, admdfs
@@ -8184,6 +8181,8 @@ URL-REGEX, https://api.bilibili.com/pgc/season/rank/cn
 
 URL-REGEX, ^https:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/image-\d{4}-\d{4}\/
 
+DOMAIN, log.star.ele.me
+
 DOMAIN, ad.bn.netease.com
 DOMAIN, ad.yixin.im
 DOMAIN, iadmat.nosdn.127.net
@@ -8210,8 +8209,6 @@ URL-REGEX, https://api.zhihu.com/(fringe|zst|real_time|ad-style-service|banners|
 URL-REGEX, https://api.zhihu.com.*(launch|recommendations)
 URL-REGEX, https://api.zhihu.com/search/(top|tabs|preset)
 URL-REGEX, https://api.zhihu.com/answers/.*/comments/featured-comment-ad
-AND, ((USER-AGENT, ZhihuHybrid*),  (NOT, ((DOMAIN, www.zhihu.com))),  (NOT, ((DOMAIN, static.zhihu.com))),  (NOT, ((DOMAIN-SUFFIX, zhimg.com))),  (NOT, ((DOMAIN, daily.zhihu.com))))
-AND, ((USER-AGENT, osee2*),  (NOT, ((DOMAIN, api.zhihu.com))),  (NOT, ((DOMAIN, lens.zhihu.com))),  (NOT, ((DOMAIN, static.zhihu.com))),  (NOT, ((DOMAIN, www.zhihu.com))),  (NOT, ((DOMAIN-SUFFIX, zhimg.com))))
 
 URL-REGEX, https?://(e|m).+/((uu|oo).php.+|\d+.x?html\?$)
 URL-REGEX, https?://[^(apple|10010)]+.(com|cn)\/(a|A)d(s|v)?(/|.js)

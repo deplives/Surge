@@ -1,60 +1,21 @@
-USER-AGENT, com.apple.appstored*
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,me.com
 
-DOMAIN, api-edge.apps.apple.com
-DOMAIN, api.apps.apple.com
-DOMAIN, appldnld.apple.com
-DOMAIN, apple.comscoreresearch.com
-DOMAIN, apps.apple.com
-DOMAIN, apptrailers.itunes.apple.com
-DOMAIN, bag.itunes.apple.com
-DOMAIN, beta.music.apple.com
-DOMAIN, cdn.apple-cloudkit.com
-DOMAIN, devimages-cdn.apple.com
-DOMAIN, devstreaming-cdn.apple.com
-DOMAIN, gateway.icloud.com
-DOMAIN, iosapps.itunes.apple.com
-DOMAIN, js-cdn.music.apple.com
-DOMAIN, news-edge.apple.com
-DOMAIN, news-events.apple.com
-DOMAIN, p14-buy.itunes.apple.com
-DOMAIN, play.itunes.apple.com
-DOMAIN, se-edge.itunes.apple.com
-DOMAIN, se.itunes.apple.com
-DOMAIN, su.itunes.apple.com
-DOMAIN, supportdownload.apple.com
-DOMAIN, swcdn.apple.com
-DOMAIN, updates-http.cdn-apple.com
-DOMAIN, upp.itunes.apple.com
-DOMAIN, xp.apple.com
-
-DOMAIN-SUFFIX, aaplimg.com
-DOMAIN-SUFFIX, apple-cloudkit.com
-DOMAIN-SUFFIX, apple.co
-DOMAIN-SUFFIX, apple.com
-DOMAIN-SUFFIX, apple.com.cn
-DOMAIN-SUFFIX, apple.news
-DOMAIN-SUFFIX, appsto.re
-DOMAIN-SUFFIX, audio-ssl.itunes.apple.com
-DOMAIN-SUFFIX, cdn-apple.com
-DOMAIN-SUFFIX, hls-amt.itunes.apple.com
-DOMAIN-SUFFIX, hls.itunes.apple.com
-DOMAIN-SUFFIX, icloud-content.com
-DOMAIN-SUFFIX, icloud.com
-DOMAIN-SUFFIX, icloud.com.cn
-DOMAIN-SUFFIX, itunes.apple.com
-DOMAIN-SUFFIX, itunes.com
-DOMAIN-SUFFIX, me.com
-DOMAIN-SUFFIX, mzstatic.com
-
-DOMAIN-KEYWORD, buy.itunes.apple.com
-
-IP-CIDR, 17.0.0.0/8, no-resolve
-IP-CIDR, 63.92.224.0/19, no-resolve
-IP-CIDR, 65.199.22.0/23, no-resolve
-IP-CIDR, 139.178.128.0/18, no-resolve
-IP-CIDR, 144.178.0.0/19, no-resolve
-IP-CIDR, 144.178.36.0/22, no-resolve
-IP-CIDR, 144.178.48.0/20, no-resolve
-IP-CIDR, 192.35.50.0/24, no-resolve
-IP-CIDR, 198.183.17.0/24, no-resolve
-IP-CIDR, 205.180.175.0/24, no-resolve
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,63.92.224.0/19,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
+IP-CIDR,139.178.128.0/18,no-resolve
+IP-CIDR,144.178.0.0/19,no-resolve
+IP-CIDR,144.178.36.0/22,no-resolve
+IP-CIDR,144.178.48.0/20,no-resolve
+IP-CIDR,192.35.50.0/24,no-resolve
+IP-CIDR,198.183.17.0/24,no-resolve
+IP-CIDR,205.180.175.0/24,no-resolve

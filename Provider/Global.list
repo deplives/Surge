@@ -1,13 +1,3 @@
-USER-AGENT, PayPal*
-DOMAIN-KEYWORD, paypal
-DOMAIN-SUFFIX, paypal.com
-DOMAIN-SUFFIX, paypalobjects.com
-
-PROCESS-NAME, OneDrive
-PROCESS-NAME, OneDriveUpdater
-USER-AGENT, OneDrive*
-USER-AGENT, OneDriveiOSApp*
-
 DOMAIN-SUFFIX, lin.ee
 DOMAIN-SUFFIX, line.me
 DOMAIN-SUFFIX, line.naver.jp
@@ -26,6 +16,8 @@ DOMAIN-SUFFIX, api.amplitude.com
 DOMAIN-SUFFIX, app.smartmailcloud.com
 DOMAIN-SUFFIX, gate.hockeyapp.net
 DOMAIN-SUFFIX, smartmailcloud.com
+
+USER-AGENT, battleroyale*
 
 DOMAIN-SUFFIX, 2o7.net
 DOMAIN-SUFFIX, 4everProxy.com
@@ -292,6 +284,7 @@ DOMAIN-SUFFIX, logmein.com
 DOMAIN-SUFFIX, macid.co
 DOMAIN-SUFFIX, macromedia.com
 DOMAIN-SUFFIX, macrumors.com
+DOMAIN-SUFFIX, mangaup.jp
 DOMAIN-SUFFIX, manhuaren.com
 DOMAIN-SUFFIX, marketwatch.com
 DOMAIN-SUFFIX, mashable.com
@@ -317,7 +310,9 @@ DOMAIN-SUFFIX, ndr.de
 DOMAIN-SUFFIX, netdna-cdn.com
 DOMAIN-SUFFIX, newipnow.com
 DOMAIN-SUFFIX, nextmedia.com
+DOMAIN-SUFFIX, nicovideo.jp
 DOMAIN-SUFFIX, nih.gov
+DOMAIN-SUFFIX, nimg.jp
 DOMAIN-SUFFIX, nintendo.com
 DOMAIN-SUFFIX, nintendo.net
 DOMAIN-SUFFIX, notion.so
@@ -358,16 +353,16 @@ DOMAIN-SUFFIX, pixelmator.com
 DOMAIN-SUFFIX, pixiv.net
 DOMAIN-SUFFIX, pixnet.net
 DOMAIN-SUFFIX, playpcesor.com
-DOMAIN-SUFFIX, phncdn.com
-DOMAIN-SUFFIX, phprcdn.com
 DOMAIN-SUFFIX, pokemon.com
 DOMAIN-SUFFIX, polymer-project.org
 DOMAIN-SUFFIX, popo.tw
 DOMAIN-SUFFIX, potato.im
-DOMAIN-SUFFIX, pornhub.com
-DOMAIN-SUFFIX, pornhubpremium.com
 DOMAIN-SUFFIX, redd.it
 DOMAIN-SUFFIX, rthk.hk
+DOMAIN-SUFFIX, phncdn.com
+DOMAIN-SUFFIX, phprcdn.com
+DOMAIN-SUFFIX, pornhub.com
+DOMAIN-SUFFIX, pornhubpremium.com
 DOMAIN-SUFFIX, prfct.co
 DOMAIN-SUFFIX, proxfree.com
 DOMAIN-SUFFIX, psiphon3.com
@@ -439,7 +434,6 @@ DOMAIN-SUFFIX, sydneytoday.com
 DOMAIN-SUFFIX, symauth.com
 DOMAIN-SUFFIX, symcb.com
 DOMAIN-SUFFIX, symcd.com
-DOMAIN-SUFFIX, t.me
 DOMAIN-SUFFIX, t66y.com
 DOMAIN-SUFFIX, tablesgenerator.com
 DOMAIN-SUFFIX, tabtter.jp
@@ -448,15 +442,10 @@ DOMAIN-SUFFIX, talkboxapp.com
 DOMAIN-SUFFIX, talkonly.net
 DOMAIN-SUFFIX, tapbots.com
 DOMAIN-SUFFIX, tapbots.net
-DOMAIN-SUFFIX, tdesktop.com
 DOMAIN-SUFFIX, techcrunch.com
 DOMAIN-SUFFIX, technorati.com
 DOMAIN-SUFFIX, techsmith.com
 DOMAIN-SUFFIX, teddysun.com
-DOMAIN-SUFFIX, telegra.ph
-DOMAIN-SUFFIX, telegram.me
-DOMAIN-SUFFIX, telegram.org
-DOMAIN-SUFFIX, telesco.pe
 DOMAIN-SUFFIX, textnow.me
 DOMAIN-SUFFIX, thebobs.com
 DOMAIN-SUFFIX, theinitium.com
@@ -620,6 +609,8 @@ DOMAIN-SUFFIX, zaobao.com.sg
 DOMAIN-SUFFIX, zeutch.com
 DOMAIN-SUFFIX, zynamics.com
 
+USER-AGENT, WhatsApp*
+
 DOMAIN-KEYWORD, appledaily
 DOMAIN-KEYWORD, beetalk
 DOMAIN-KEYWORD, blogspot
@@ -695,13 +686,6 @@ IP-CIDR, 54.226.0.0/15, no-resolve
 IP-CIDR, 54.230.156.0/22, no-resolve
 IP-CIDR, 54.93.0.0/16, no-resolve
 
-IP-CIDR, 91.108.4.0/22, no-resolve
-IP-CIDR, 91.108.8.0/22, no-resolve
-IP-CIDR, 91.108.12.0/22, no-resolve
-IP-CIDR, 91.108.16.0/22, no-resolve
-IP-CIDR, 91.108.56.0/22, no-resolve
-IP-CIDR, 149.154.160.0/20, no-resolve
-
 IP-CIDR, 103.4.96.0/22, no-resolve
 IP-CIDR, 129.134.0.0/17, no-resolve
 IP-CIDR, 157.240.0.0/17, no-resolve
@@ -721,13 +705,6 @@ IP-CIDR, 74.119.76.0/22, no-resolve
 IP-CIDR, 173.194.0.0/16, no-resolve
 IP-CIDR, 74.125.0.0/16, no-resolve
 
-IP-CIDR, 1.201.0.0/24, no-resolve
-IP-CIDR, 103.246.56.0/22, no-resolve
-IP-CIDR, 103.27.148.0/22, no-resolve
-IP-CIDR, 110.76.140.0/22, no-resolve
-IP-CIDR, 113.61.104.0/22, no-resolve
-IP-CIDR, 27.0.236.0/22, no-resolve
-
 IP-CIDR, 103.2.28.0/22, no-resolve
 IP-CIDR, 119.235.224.0/21, no-resolve
 IP-CIDR, 119.235.232.0/23, no-resolve
@@ -742,6 +719,12 @@ IP-CIDR, 203.104.128.0/20, no-resolve
 IP-CIDR, 203.174.66.64/26, no-resolve
 IP-CIDR, 203.174.77.0/24, no-resolve
 
-IP-CIDR6, 2001:b28:f23d::/48, no-resolve
-IP-CIDR6, 2001:b28:f23f::/48, no-resolve
-IP-CIDR6, 2001:67c:4e8::/48, no-resolve
+IP-CIDR, 13.251.24.157/24, no-resolve
+IP-CIDR, 13.251.41.203/24, no-resolve
+IP-CIDR, 17.252.156.147/24, no-resolve
+IP-CIDR, 17.252.157.26/24, no-resolve
+
+IP-CIDR, 74.86.0.0/16, no-resolve
+IP-CIDR, 75.126.0.0/16, no-resolve
+IP-CIDR, 174.37.0.0/16, no-resolve
+IP-CIDR, 208.43.0.0/16, no-resolve
