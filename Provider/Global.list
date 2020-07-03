@@ -609,6 +609,9 @@ DOMAIN-SUFFIX, zaobao.com.sg
 DOMAIN-SUFFIX, zeutch.com
 DOMAIN-SUFFIX, zynamics.com
 
+USER-AGENT, %E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
+USER-AGENT, *com.google.Drive*
+USER-AGENT, Google.Drive*
 USER-AGENT, WhatsApp*
 
 DOMAIN-KEYWORD, appledaily
@@ -634,12 +637,16 @@ DOMAIN-SUFFIX, creativelab5.com
 DOMAIN-SUFFIX, crittercism.com
 DOMAIN-SUFFIX, culturalspot.org
 DOMAIN-SUFFIX, dartlang.org
+DOMAIN-SUFFIX, docs.google.com
+DOMAIN-SUFFIX, drive.google.com
 DOMAIN-SUFFIX, fb.com
 DOMAIN-SUFFIX, fb.me
 DOMAIN-SUFFIX, fbcdn.net
 DOMAIN-SUFFIX, fbsbx.com
 DOMAIN-SUFFIX, gcr.io
 DOMAIN-SUFFIX, gmail.com
+DOMAIN-SUFFIX, googledrive.com
+DOMAIN-SUFFIX, googleusercontent.com
 DOMAIN-SUFFIX, gosetsuden.jp
 DOMAIN-SUFFIX, gvt1.com
 DOMAIN-SUFFIX, gwtproject.org

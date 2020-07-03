@@ -7,9 +7,9 @@ hostname = *.googlevideo.com
 */
 
 var data = {
-    body: "{}",
-    headers: {
-      "Content-Type": "multipart/byteranges"
-    }
-  };
-  $done({response: data});
+  body: "{}",
+  headers: {
+    "Content-Type": "multipart/byteranges"
+  }
+};
+$done({ response: data });
