@@ -7,7 +7,6 @@ function weather() {
         headers: {},
     };
     $httpClient.post(basicurl, function (error, response, data) {
-        $notification.post(error, response, data);
         if (!error) {
             if (response.status == 200) {
                 var obj = JSON.parse(data);
