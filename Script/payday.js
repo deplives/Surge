@@ -62,8 +62,8 @@ if (DiffDay(Today(), NextDay()) == 0) {
     detail = "今天就要发工资啦🤪"
 }
 else {
-    detail = "🔜 距离下一个薪资日 " + NextDay() + "(" + getWeek(NextDay()) + ")" + " 还有 " + DiffDay(Today(), NextDay()) + " 天"
+    detail = "🔜 距离下一个薪资日 " + NextDay() + "(" + getWeek(NextDay()) + ")" + " 还有 " + DiffDay(Today(), NextDay()) + " 天";
 }
 
-$notification.post(title, subtitle, detail)
-$done({})
+$notification.post(title, subtitle, detail);
+$done({});
