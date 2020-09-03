@@ -28,7 +28,7 @@ const url = $request.url;
 let body = $response.body;
 
 if (
-    url.indexOf(path1) != -1 ||
+    url.indexOf(timeline) != -1 ||
     url.indexOf(unread) != -1 ||
     url.indexOf(friends_timeline) != -1 ||
     url.indexOf(video_timeline) != -1 ||
