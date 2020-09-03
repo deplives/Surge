@@ -19,6 +19,6 @@ $task.fetch(basicurl).then(response => {
     console.log("天气信息查询成功")
     $notify(wmation[0], wmation[1], wmation[2]);
 }, reason => {
-        console.log("天气接口请求失败")
-        $notify(tel + '天气接口请求失败', reason.error);
+    console.log("天气接口请求失败")
+    $notify(tel + '天气接口请求失败', reason.error);
 });
