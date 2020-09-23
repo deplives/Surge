@@ -27,91 +27,6 @@ const info = "/photo/info";
 const url = $request.url;
 let body = $response.body;
 
-if (
-    url.indexOf(timeline) != -1 ||
-    url.indexOf(unread) != -1 ||
-    url.indexOf(friends_timeline) != -1 ||
-    url.indexOf(video_timeline) != -1 ||
-    url.indexOf(friends_timeline_1) != -1 ||
-    url.indexOf(tiny_stream_video_list) != -1
-) {
-    let obj = JSON.parse(body);
-    if (obj.statuses) obj.statuses = filter_timeline_statuses(obj.statuses);
-    if (obj.advertises) obj.advertises = [];
-    if (obj.ad) obj.ad = [];
-    if (obj.num) obj.num = obj.original_num;
-    if (obj.trends) obj.trends = [];
-    body = JSON.stringify(obj);
-} else if (url.indexOf(extend) != -1) {
-    let obj = JSON.parse(body);
-    if (obj.trend) delete obj.trend;
-    body = JSON.stringify(obj);
-} else if (url.indexOf(build_comments) != -1) {
-    let obj = JSON.parse(body);
-    obj.recommend_max_id = 0;
-    if (obj.status) {
-        if (obj.top_hot_structs) {
-            obj.max_id = obj.top_hot_structs.call_back_struct.max_id;
-            delete obj.top_hot_structs;
-        }
-        if (obj.datas) obj.datas = filter_comments(obj.datas);
-    } else {
-        obj.datas = [];
-    }
-    body = JSON.stringify(obj);
-} else if (url.indexOf(recommend_list) != -1 ||
-    url.indexOf(pic_recommend_status) != -1) {
-    let obj = JSON.parse(body);
-    obj.data = {};
-    body = JSON.stringify(obj);
-} else if (url.indexOf(video_stream) != -1) {
-    let obj = JSON.parse(body);
-    let segments = obj.segments;
-    if (segments && segments.length > 0) {
-        let i = segments.length;
-        while (i--) {
-            const element = segments[i];
-            let is_ad = element.is_ad;
-            if (is_ad && is_ad == true) segments.splice(i, 1);
-        }
-    }
-    body = JSON.stringify(obj);
-} else if (url.indexOf(positives_get) != -1) {
-    let obj = JSON.parse(body);
-    obj.datas = [];
-    body = JSON.stringify(obj);
-} else if (url.indexOf(home_list) != -1) {
-    let obj = JSON.parse(body);
-    obj.story_list = [];
-    body = JSON.stringify(obj);
-} else if (url.indexOf(picfeed) != -1) {
-    let obj = JSON.parse(body);
-    obj.data = [];
-    body = JSON.stringify(obj);
-} else if (
-    url.indexOf(statuses) != -1 ||
-    url.indexOf(fangle_timeline) != -1 ||
-    url.indexOf(searchall) != -1 ||
-    url.indexOf(cardlist) != -1 ||
-    url.indexOf(page) != -1
-) {
-    let obj = JSON.parse(body);
-    if (obj.cards) obj.cards = filter_timeline_cards(obj.cards);
-    body = JSON.stringify(obj);
-} else if (url.indexOf(video_mixtimeline) != -1) {
-    let obj = JSON.parse(body);
-    delete obj.expandable_view;
-    if (obj.hasOwnProperty('expandable_views'))
-        delete obj.expandable_views;
-    body = JSON.stringify(obj);
-} else if (url.indexOf(info) != -1) {
-    if (body.indexOf("ad_params") != -1) {
-        body = JSON.stringify({});
-    }
-}
-
-$done({ body });
-
 function filter_timeline_statuses(statuses) {
     if (statuses && statuses.length > 0) {
         let i = statuses.length;
@@ -206,3 +121,89 @@ function is_timeline_likerecommend(title) {
 function is_stream_video_ad(item) {
     return item.ad_state && item.ad_state == 1
 }
+
+if (
+    url.indexOf(timeline) != -1 ||
+    url.indexOf(unread) != -1 ||
+    url.indexOf(friends_timeline) != -1 ||
+    url.indexOf(video_timeline) != -1 ||
+    url.indexOf(friends_timeline_1) != -1 ||
+    url.indexOf(tiny_stream_video_list) != -1
+) {
+    let obj = JSON.parse(body);
+    if (obj.statuses) obj.statuses = filter_timeline_statuses(obj.statuses);
+    if (obj.advertises) obj.advertises = [];
+    if (obj.ad) obj.ad = [];
+    if (obj.num) obj.num = obj.original_num;
+    if (obj.trends) obj.trends = [];
+    body = JSON.stringify(obj);
+} else if (url.indexOf(extend) != -1) {
+    let obj = JSON.parse(body);
+    if (obj.trend) delete obj.trend;
+    body = JSON.stringify(obj);
+} else if (url.indexOf(build_comments) != -1) {
+    let obj = JSON.parse(body);
+    obj.recommend_max_id = 0;
+    if (obj.status) {
+        if (obj.top_hot_structs) {
+            obj.max_id = obj.top_hot_structs.call_back_struct.max_id;
+            delete obj.top_hot_structs;
+        }
+        if (obj.datas) obj.datas = filter_comments(obj.datas);
+    } else {
+        obj.datas = [];
+    }
+    body = JSON.stringify(obj);
+} else if (url.indexOf(recommend_list) != -1 ||
+    url.indexOf(pic_recommend_status) != -1) {
+    let obj = JSON.parse(body);
+    obj.data = {};
+    body = JSON.stringify(obj);
+} else if (url.indexOf(video_stream) != -1) {
+    let obj = JSON.parse(body);
+    let segments = obj.segments;
+    if (segments && segments.length > 0) {
+        let i = segments.length;
+        while (i--) {
+            const element = segments[i];
+            let is_ad = element.is_ad;
+            if (is_ad && is_ad == true) segments.splice(i, 1);
+        }
+    }
+    body = JSON.stringify(obj);
+} else if (url.indexOf(positives_get) != -1) {
+    let obj = JSON.parse(body);
+    obj.datas = [];
+    body = JSON.stringify(obj);
+} else if (url.indexOf(home_list) != -1) {
+    let obj = JSON.parse(body);
+    obj.story_list = [];
+    body = JSON.stringify(obj);
+} else if (url.indexOf(picfeed) != -1) {
+    let obj = JSON.parse(body);
+    obj.data = [];
+    body = JSON.stringify(obj);
+} else if (
+    url.indexOf(statuses) != -1 ||
+    url.indexOf(fangle_timeline) != -1 ||
+    url.indexOf(searchall) != -1 ||
+    url.indexOf(cardlist) != -1 ||
+    url.indexOf(page) != -1
+) {
+    let obj = JSON.parse(body);
+    if (obj.cards) obj.cards = filter_timeline_cards(obj.cards);
+    body = JSON.stringify(obj);
+} else if (url.indexOf(video_mixtimeline) != -1) {
+    let obj = JSON.parse(body);
+    delete obj.expandable_view;
+    if (obj.hasOwnProperty('expandable_views'))
+        delete obj.expandable_views;
+    body = JSON.stringify(obj);
+} else if (url.indexOf(info) != -1) {
+    if (body.indexOf("ad_params") != -1) {
+        body = JSON.stringify({});
+    }
+}
+
+console.log("weibo 去广告成功运行")
+$done({ body });

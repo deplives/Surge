@@ -8,4 +8,6 @@ var data = {
         "Content-Type": "application/json"
     }
 };
+
+console.log("wechat 脚本成功运行")
 $done({ response: data });

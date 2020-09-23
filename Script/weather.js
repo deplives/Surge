@@ -17,14 +17,14 @@ function weather() {
                 var hourly3 = obj.HeWeather6[0].hourly[2].time + "\t" + obj.HeWeather6[0].hourly[2].cond_txt + " | " + obj.HeWeather6[0].hourly[2].tmp + "℃" + " | " + obj.HeWeather6[0].hourly[2].wind_dir + " " + obj.HeWeather6[0].hourly[2].wind_sc + "级" + " | " + "降水概率: " + obj.HeWeather6[0].hourly[2].pop + "%"
                 var hourly = [hourly1, hourly2, hourly3].join("\n")
                 let wmation = [title, subtitle, hourly];
-                console.log("天气信息查询成功")
+                console.log("天气查询成功")
                 $notification.post(wmation[0], wmation[1], wmation[2]);
             } else {
-                console.log("天气接口请求失败")
+                console.log("天气请求失败")
                 $notification.post(tel + '天气接口请求失败', reason.error);
             }
         } else {
-            console.log("天气接口请求失败")
+            console.log("天气请求失败")
             $notification.post(tel + '天气接口请求失败', reason.error);
         }
     })

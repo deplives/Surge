@@ -66,4 +66,6 @@ else {
 }
 
 $notification.post(title, subtitle, detail);
+
+console.log("薪资日脚本成功运行")
 $done({});
