@@ -36,8 +36,11 @@ URL-REGEX, ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start, REJECT-
 ^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ - reject
 ^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement - reject
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
 ^https?:\/\/\w+\.youtube\.com\/api\/stats\/ads - reject
 ^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= - reject
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
