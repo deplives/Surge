@@ -2,8 +2,15 @@
 #!desc=YouTube 去广告
 
 
+[URL Rewrite]
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/\w+\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= - reject
+
 [Script]
 http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/YouTube.js
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com 
+hostname = %APPEND% *.googlevideo.com, *.youtube.com
