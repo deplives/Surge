@@ -24,5 +24,5 @@ if (url.indexOf(wbpullad) != -1) {
     body = JSON.stringify(obj);
 }
 
-console.log("weibo 去开屏广告成功运行")
+console.log("微博去开屏广告")
 $done({ body });

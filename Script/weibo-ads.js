@@ -205,5 +205,5 @@ if (
     }
 }
 
-console.log("weibo 去广告成功运行")
+console.log("微博去广告")
 $done({ body });
