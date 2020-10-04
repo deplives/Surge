@@ -62,4 +62,4 @@
 
 
 [MITM]
-hostname = %INSERT% www.google.cn,api.abema.io
+hostname = %INSERT% www.google.cn, api.abema.io
