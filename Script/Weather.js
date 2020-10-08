@@ -11,7 +11,7 @@ function weather() {
         url: "https://api.heweather.net/v7/weather/24h?location=101010100&key=e1ee803d766d47a9b9a634d5a8409b93&lang=zh",
         headers: {},
     };
-    $httpClient.post(basicurl, function (error, response, data) {
+    $httpClient.get(basicurl, function (error, response, data) {
         if (!error) {
             if (response.status == 200) {
                 var obj = JSON.parse(data);
