@@ -17,19 +17,19 @@ function weather() {
                 var obj = JSON.parse(data);
                 var title = "北京未来三小时天气";
                 var subtitle = "更新时间: " + dateformater(obj["updateTime"]);
-                var hourly1 = dateformater(obj["hourly"][0]["fxTime"]) + "\t" + obj["hourly"][0]["text"] + " | " + obj["hourly"][0]["temp"] + " ℃" + " | " + obj["hourly"][0]["windDir"] + " " + obj["hourly"][0]["windScale"] + "级" + " | " + "降水概率: " + obj["hourly"][0]["pop"] + "%";
-                var hourly2 = dateformater(obj["hourly"][1]["fxTime"]) + "\t" + obj["hourly"][1]["text"] + " | " + obj["hourly"][1]["temp"] + " ℃" + " | " + obj["hourly"][1]["windDir"] + " " + obj["hourly"][1]["windScale"] + "级" + " | " + "降水概率: " + obj["hourly"][1]["pop"] + "%";
-                var hourly3 = dateformater(obj["hourly"][2]["fxTime"]) + "\t" + obj["hourly"][2]["text"] + " | " + obj["hourly"][2]["temp"] + " ℃" + " | " + obj["hourly"][2]["windDir"] + " " + obj["hourly"][2]["windScale"] + "级" + " | " + "降水概率: " + obj["hourly"][2]["pop"] + "%";
-                var hourly = [hourly1, hourly2, hourly3].join("\n")
+                var hourly1 = dateformater(obj["hourly"][0]["fxTime"]) + "\t" + obj["hourly"][0]["text"] + " | " + obj["hourly"][0]["temp"] + " ℃" + " | " + obj["hourly"][0]["windDir"] + " " + obj["hourly"][0]["windScale"] + "级" + " | " + "降水量: " + obj["hourly"][0]["precip"] + "mm";
+                var hourly2 = dateformater(obj["hourly"][1]["fxTime"]) + "\t" + obj["hourly"][1]["text"] + " | " + obj["hourly"][1]["temp"] + " ℃" + " | " + obj["hourly"][1]["windDir"] + " " + obj["hourly"][1]["windScale"] + "级" + " | " + "降水量: " + obj["hourly"][1]["precip"] + "mm";
+                var hourly3 = dateformater(obj["hourly"][2]["fxTime"]) + "\t" + obj["hourly"][2]["text"] + " | " + obj["hourly"][2]["temp"] + " ℃" + " | " + obj["hourly"][2]["windDir"] + " " + obj["hourly"][2]["windScale"] + "级" + " | " + "降水量: " + obj["hourly"][2]["precip"] + "mm";
+                var hourly = [hourly1, hourly2, hourly3].join("\n");
                 let wmation = [title, subtitle, hourly];
-                console.log("天气查询成功")
+                console.log("天气查询成功");
                 $notification.post(wmation[0], wmation[1], wmation[2]);
             } else {
-                console.log("天气请求失败")
+                console.log("天气请求失败");
                 $notification.post(tel + '天气接口请求失败', reason.error);
             }
         } else {
-            console.log("天气请求失败")
+            console.log("天气请求失败");
             $notification.post(tel + '天气接口请求失败', reason.error);
         }
     })
