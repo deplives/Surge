@@ -1,5 +1,5 @@
 /*
-薪资日 = type=cron,cronexp=00 10 * * *,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/payday.js,script-update-interval=0
+薪资日 = type=cron,cronexp=00 10 * * *,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Payday.js,script-update-interval=0
 */
 var TargetDate = 10
 

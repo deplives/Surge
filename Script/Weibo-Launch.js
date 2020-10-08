@@ -1,5 +1,5 @@
 /*
-微博开屏广告 = type=http-response,requires-body=true,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/weibo-launch.js,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
+微博开屏广告 = type=http-response,requires-body=true,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Launch.js,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
 */
 
 const sdkad = "/interface/sdk/sdkad.php";
