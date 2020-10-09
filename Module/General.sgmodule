@@ -1,5 +1,5 @@
 #!name=URL Rewrite
-#!desc=通用 URL Rewrite
+#!desc=URL Rewrite
 
 [URL Rewrite]
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
