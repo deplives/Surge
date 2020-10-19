@@ -1,5 +1,5 @@
 /*
-微博应用广告 = type=http-response,requires-body=true,max-size=-1,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Ads.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list)
+微博应用广告 = type=http-response,requires-body=true,max-size=-1,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Ads.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info)
 */
 
 const timeline = "/groups/timeline";
