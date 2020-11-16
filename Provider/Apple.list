@@ -39,6 +39,7 @@ DOMAIN, swdist.apple.com
 DOMAIN, swdownload.apple.com
 DOMAIN, swpost.apple.com
 DOMAIN, swscan.apple.com
+DOMAIN, ocsp.apple.com
 DOMAIN, oscdn.apple.com
 DOMAIN, osrecovery.apple.com
 DOMAIN, mesu.apple.com

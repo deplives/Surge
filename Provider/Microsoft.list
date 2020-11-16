@@ -1,5 +1,6 @@
 USER-AGENT, OneDrive*
 DOMAIN-KEYWORD, onedrive
+DOMAIN-SUFFIX, aka.ms
 DOMAIN-SUFFIX, azure.com
 DOMAIN-SUFFIX, fabric.io
 DOMAIN-SUFFIX, files.1drv.com
