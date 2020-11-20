@@ -1,28 +1,29 @@
 /*
-微博应用广告 = type=http-response,requires-body=true,max-size=-1,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Ads.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info)
+微博应用广告 = type=http-response,requires-body=true,max-size=false,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Ads.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info)
 */
 
-const timeline = "/groups/timeline";
-const unread = "/statuses/unread";
-const extend = "/statuses/extend";
-const build_comments = "/comments/build_comments";
-const recommend_list = "/photo/recommend_list";
-const video_stream = "/stories/video_stream";
-const positives_get = "/statuses/positives/get";
-const home_list = "/stories/home_list";
-const statuses = "/profile/statuses";
-const friends_timeline = "/statuses/friends/timeline";
-const picfeed = "/service/picfeed";
-const fangle_timeline = "/fangle/timeline";
-const searchall = "/searchall";
-const cardlist = "/cardlist";
-const video_timeline = "/statuses/video_timeline";
-const page = "/page";
-const friends_timeline_1 = "/statuses/friends_timeline";
-const pic_recommend_status = "/!/photos/pic_recommend_status";
-const video_mixtimeline = "/statuses/video_mixtimeline";
-const tiny_stream_video_list = "/video/tiny_stream_video_list";
-const info = "/photo/info";
+
+const path_timeline = "/groups/timeline";
+const path_unread = "/statuses/unread";
+const path_extend = "/statuses/extend";
+const path_build_comments = "/comments/build_comments";
+const path_recommend_list = "/photo/recommend_list";
+const path_video_stream = "/stories/video_stream";
+const path_positives_get = "/statuses/positives/get";
+const path_home_list = "/stories/home_list";
+const path_profile_statuses = "/profile/statuses";
+const path_statuses_friends_timeline = "/statuses/friends/timeline";
+const path_picfeed = "/service/picfeed";
+const path_fangle_timeline = "/fangle/timeline";
+const path_searchall = "/searchall";
+const path_cardlist = "/cardlist";
+const path_video_timeline = "/statuses/video_timeline";
+const path_page = "/page";
+const path_friends_timeline = "/statuses/friends_timeline";
+const path_pic_recommend_status = "/!/photos/pic_recommend_status";
+const path_video_mixtimeline = "/statuses/video_mixtimeline";
+const path_tiny_stream_video_list = "/video/tiny_stream_video_list";
+const path_info = "/photo/info";
 
 const url = $request.url;
 let body = $response.body;
@@ -123,12 +124,12 @@ function is_stream_video_ad(item) {
 }
 
 if (
-    url.indexOf(timeline) != -1 ||
-    url.indexOf(unread) != -1 ||
-    url.indexOf(friends_timeline) != -1 ||
-    url.indexOf(video_timeline) != -1 ||
-    url.indexOf(friends_timeline_1) != -1 ||
-    url.indexOf(tiny_stream_video_list) != -1
+    url.indexOf(path_timeline) != -1 ||
+    url.indexOf(path_unread) != -1 ||
+    url.indexOf(path_statuses_friends_timeline) != -1 ||
+    url.indexOf(path_video_timeline) != -1 ||
+    url.indexOf(path_friends_timeline) != -1 ||
+    url.indexOf(path_tiny_stream_video_list) != -1
 ) {
     let obj = JSON.parse(body);
     if (obj.statuses) obj.statuses = filter_timeline_statuses(obj.statuses);
@@ -137,11 +138,11 @@ if (
     if (obj.num) obj.num = obj.original_num;
     if (obj.trends) obj.trends = [];
     body = JSON.stringify(obj);
-} else if (url.indexOf(extend) != -1) {
+} else if (url.indexOf(path_extend) != -1) {
     let obj = JSON.parse(body);
     if (obj.trend) delete obj.trend;
     body = JSON.stringify(obj);
-} else if (url.indexOf(build_comments) != -1) {
+} else if (url.indexOf(path_build_comments) != -1) {
     let obj = JSON.parse(body);
     obj.recommend_max_id = 0;
     if (obj.status) {
@@ -154,12 +155,12 @@ if (
         obj.datas = [];
     }
     body = JSON.stringify(obj);
-} else if (url.indexOf(recommend_list) != -1 ||
-    url.indexOf(pic_recommend_status) != -1) {
+} else if (url.indexOf(path_recommend_list) != -1 ||
+    url.indexOf(path_pic_recommend_status) != -1) {
     let obj = JSON.parse(body);
     obj.data = {};
     body = JSON.stringify(obj);
-} else if (url.indexOf(video_stream) != -1) {
+} else if (url.indexOf(path_video_stream) != -1) {
     let obj = JSON.parse(body);
     let segments = obj.segments;
     if (segments && segments.length > 0) {
@@ -171,35 +172,35 @@ if (
         }
     }
     body = JSON.stringify(obj);
-} else if (url.indexOf(positives_get) != -1) {
+} else if (url.indexOf(path_positives_get) != -1) {
     let obj = JSON.parse(body);
     obj.datas = [];
     body = JSON.stringify(obj);
-} else if (url.indexOf(home_list) != -1) {
+} else if (url.indexOf(path_home_list) != -1) {
     let obj = JSON.parse(body);
     obj.story_list = [];
     body = JSON.stringify(obj);
-} else if (url.indexOf(picfeed) != -1) {
+} else if (url.indexOf(path_picfeed) != -1) {
     let obj = JSON.parse(body);
     obj.data = [];
     body = JSON.stringify(obj);
 } else if (
-    url.indexOf(statuses) != -1 ||
-    url.indexOf(fangle_timeline) != -1 ||
-    url.indexOf(searchall) != -1 ||
-    url.indexOf(cardlist) != -1 ||
-    url.indexOf(page) != -1
+    url.indexOf(path_profile_statuses) != -1 ||
+    url.indexOf(path_fangle_timeline) != -1 ||
+    url.indexOf(path_searchall) != -1 ||
+    url.indexOf(path_cardlist) != -1 ||
+    url.indexOf(path_page) != -1
 ) {
     let obj = JSON.parse(body);
     if (obj.cards) obj.cards = filter_timeline_cards(obj.cards);
     body = JSON.stringify(obj);
-} else if (url.indexOf(video_mixtimeline) != -1) {
+} else if (url.indexOf(path_video_mixtimeline) != -1) {
     let obj = JSON.parse(body);
     delete obj.expandable_view;
     if (obj.hasOwnProperty('expandable_views'))
         delete obj.expandable_views;
     body = JSON.stringify(obj);
-} else if (url.indexOf(info) != -1) {
+} else if (url.indexOf(path_info) != -1) {
     if (body.indexOf("ad_params") != -1) {
         body = JSON.stringify({});
     }
