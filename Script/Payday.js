@@ -26,8 +26,15 @@ function NextDay() {
     }
     if (DiffDay(today, next) < 0) {
         var nextYear = next.getFullYear();
-        var nextMonth = doHandleMonth(next.getMonth() + 2);
+        if (next.getMonth() + 2 > 12) {
+            var nextMonth = doHandleMonth(next.getMonth() + 2 - 12);
+            var nextYear = next.getFullYear() + 1;
+        }
+        else {
+            var nextMonth = doHandleMonth(next.getMonth() + 2);
+        }
         var nextDate = next.getDate();
+
         return nextYear + "-" + nextMonth + "-" + nextDate;
     }
     else {
