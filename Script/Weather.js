@@ -8,7 +8,7 @@ function dateformater(dstr) {
 
 function weather() {
     const basicurl = {
-        url: "https://api.heweather.net/v7/weather/24h?location=101010100&key=e1ee803d766d47a9b9a634d5a8409b93&lang=zh",
+        url: "https://api.heweather.net/v7/weather/24h?location=101010100&key=6c267b4dac374418b542d0b504da01df&lang=zh",
         headers: {},
     };
     $httpClient.get(basicurl, function (error, response, data) {
