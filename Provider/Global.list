@@ -48,6 +48,11 @@ DOMAIN, a771.dscq.akamai.net
 
 DOMAIN, d3c33hcgiwev3.cloudfront.net
 
+DOMAIN, cacerts.digicert.com
+DOMAIN, crl3.digicert.com
+DOMAIN, crl4.digicert.com
+DOMAIN, ocsp.digicert.com
+
 DOMAIN-SUFFIX, 4shared.com
 DOMAIN-SUFFIX, 9cache.com
 DOMAIN-SUFFIX, 9gag.com
