@@ -29,15 +29,13 @@ function NextDay() {
         if (next.getMonth() + 2 > 12) {
             var nextMonth = doHandleMonth(next.getMonth() + 2 - 12);
             var nextYear = next.getFullYear() + 1;
-        }
-        else {
+        } else {
             var nextMonth = doHandleMonth(next.getMonth() + 2);
         }
         var nextDate = next.getDate();
 
         return nextYear + "-" + nextMonth + "-" + nextDate;
-    }
-    else {
+    } else {
         return Today()
     }
 }
@@ -62,13 +60,11 @@ function DiffDay(startDay, endDay) {
 }
 
 
-
 title = "倒数日";
 subtitle = Today();
 if (DiffDay(Today(), NextDay()) == 0) {
     detail = "今天就要发工资啦🤪"
-}
-else {
+} else {
     detail = "🔜 距离下一个薪资日 " + NextDay() + "(" + getWeek(NextDay()) + ")" + " 还有 " + DiffDay(Today(), NextDay()) + " 天";
 }
 

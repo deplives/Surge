@@ -10,4 +10,4 @@ var data = {
 };
 
 console.log("wechat 脚本成功运行")
-$done({ response: data });
+$done({response: data});
