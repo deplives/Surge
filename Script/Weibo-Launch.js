@@ -3,13 +3,13 @@
 */
 
 
-const path1 = "/interface/sdk/sdkad.php";
-const path2 = "/wbapplua/wbpullad.lua";
+const path_sdkad = "/interface/sdk/sdkad.php";
+const path_wbpullad = "/wbapplua/wbpullad.lua";
 
 const url = $request.url;
 var body = $response.body;
 
-if (url.indexOf(path1) != -1) {
+if (url.indexOf(path_sdkad) != -1) {
     let re = /\{.*\}/;
     body = body.match(re);
     var obj = JSON.parse(body);
@@ -19,7 +19,7 @@ if (url.indexOf(path1) != -1) {
     body = JSON.stringify(obj) + 'OK';
 }
 
-if (url.indexOf(path2) != -1) {
+if (url.indexOf(path_wbpullad) != -1) {
     var obj = JSON.parse(body);
     if (obj.cached_ad && obj.cached_ad.ads) obj.cached_ad.ads = [];
     body = JSON.stringify(obj);
