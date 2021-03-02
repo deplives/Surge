@@ -206,5 +206,4 @@ if (
     }
 }
 
-console.log("微博去广告")
 $done({body});

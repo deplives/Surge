@@ -25,5 +25,4 @@ if (url.indexOf(path_wbpullad) != -1) {
     body = JSON.stringify(obj);
 }
 
-console.log("微博去开屏广告")
 $done({body});
