@@ -1,0 +1,5 @@
+#!name=AsusRouter
+#!desc=华硕路由器登陆映射
+
+[Host]
+router.asus.com = 192.168.50.1
