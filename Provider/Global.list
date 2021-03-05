@@ -7,27 +7,8 @@ DOMAIN-SUFFIX, gvt0.com
 DOMAIN-SUFFIX, gvt3.com
 DOMAIN-SUFFIX, xn--ngstr-lra8j.com
 DOMAIN-SUFFIX, ytimg.com
-DOMAIN-KEYWORD, .blogspot.
-
-DOMAIN-SUFFIX, blog.google
-DOMAIN-SUFFIX, googletraveladservices.com
 DOMAIN-KEYWORD, google
-DOMAIN, alt1-mtalk.google.com
-DOMAIN, alt2-mtalk.google.com
-DOMAIN, alt3-mtalk.google.com
-DOMAIN, alt4-mtalk.google.com
-DOMAIN, alt5-mtalk.google.com
-DOMAIN, alt6-mtalk.google.com
-DOMAIN, alt7-mtalk.google.com
-DOMAIN, alt8-mtalk.google.com
-DOMAIN, clientservices.googleapis.com
-DOMAIN, dl.google.com
-DOMAIN, dl.l.google.com
-DOMAIN, fonts.googleapis.com
-DOMAIN, fonts.gstatic.com
-DOMAIN, mtalk.google.com
-DOMAIN, translate.googleapis.com
-DOMAIN, update.googleapis.com
+DOMAIN-KEYWORD, .blogspot.
 
 DOMAIN-KEYWORD, .facebook.
 DOMAIN-SUFFIX, cdninstagram.com
