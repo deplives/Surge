@@ -48,13 +48,13 @@ let magicJS = MagicJS(scriptName, "INFO");
                 let user_info = { id: 'default', is_vip: false };
                 try {
                     let obj = JSON.parse(magicJS.response.body);
-                    magicJS.logDebug(`用户登录用户信息，接口响应：${magicJS.response.body}`);
+                    magicJS.logInfo(`用户登录用户信息，接口响应：${magicJS.response.body}`);
                     if (obj && obj['id'] && obj.hasOwnProperty('vip_info') && obj['vip_info'].hasOwnProperty('is_vip')) {
                         user_info = {
                             id: obj['id'],
                             is_vip: obj['vip_info']['is_vip'] ? obj['vip_info']['is_vip'] !== undefined : false
                         };
-                        magicJS.logDebug(`当前用户id：${obj['id']}，是否为VIP：${obj['vip_info']['is_vip']}`);
+                        magicJS.logInfo(`当前用户id：${obj['id']}，是否为VIP：${obj['vip_info']['is_vip']}`);
                     }
                     else {
                         magicJS.logWarning(`没有获取到当前登录用户信息，已设置为默认用户配置。如果未登录知乎请忽略此日志。`);
@@ -159,7 +159,7 @@ let magicJS = MagicJS(scriptName, "INFO");
                     let custom_blocked_users = magicJS.read(blocked_users_key, user_info.id);
                     custom_blocked_users = !!custom_blocked_users ? custom_blocked_users : {};
                     let obj = JSON.parse(magicJS.response.body);
-                    magicJS.logDebug(`当前黑名单列表: ${JSON.stringify(custom_blocked_users)}`);
+                    magicJS.logInfo(`当前黑名单列表: ${JSON.stringify(custom_blocked_users)}`);
                     delete obj['ad_info'];
                     delete obj['roundtable_info'];
                     let data = obj['data'].filter((element) => { return !custom_blocked_users[element['author']['name']] })
@@ -227,7 +227,7 @@ let magicJS = MagicJS(scriptName, "INFO");
                     try {
                         let obj = JSON.parse(magicJS.response.body);
                         if (!!obj['data']) {
-                            magicJS.logDebug(`本次滑动获取的黑名单信息：${JSON.stringify(obj['data'])}`);
+                            magicJS.logInfo(`本次滑动获取的黑名单信息：${JSON.stringify(obj['data'])}`);
                             obj['data'].forEach(element => {
                                 if (element['name'] != '[已重置]') {
                                     custom_blocked_users[element['name']] = element['id'];
@@ -254,7 +254,7 @@ let magicJS = MagicJS(scriptName, "INFO");
                     try {
                         let obj = JSON.parse(magicJS.response.body);
                         if (obj.hasOwnProperty('name') && obj.hasOwnProperty('id')) {
-                            magicJS.logDebug(`当前需要加入黑名单的用户Id：${obj['id']}，用户名：${obj['name']}`);
+                            magicJS.logInfo(`当前需要加入黑名单的用户Id：${obj['id']}，用户名：${obj['name']}`);
                             custom_blocked_users[obj['name']] = obj['id'];
                             magicJS.write(blocked_users_key, custom_blocked_users, userInfo.id);
                             magicJS.logInfo(`${obj['name']}写入脚本黑名单成功，当前脚本黑名单数据：${JSON.stringify(custom_blocked_users)}`);
@@ -276,7 +276,7 @@ let magicJS = MagicJS(scriptName, "INFO");
                         let obj = JSON.parse(magicJS.response.body);
                         if (obj.success) {
                             let user_id = magicJS.request.url.match(/https?:\/\/api\.zhihu\.com\/settings\/blocked_users\/([0-9a-zA-Z]*)/)[1];
-                            magicJS.logDebug(`当前需要移出黑名单的用户Id：${user_id}`);
+                            magicJS.logInfo(`当前需要移出黑名单的用户Id：${user_id}`);
                             for (let username in custom_blocked_users) {
                                 if (custom_blocked_users[username] == user_id) {
                                     delete custom_blocked_users[username];
@@ -302,7 +302,7 @@ let magicJS = MagicJS(scriptName, "INFO");
             case /^https?:\/\/api\.zhihu\.com\/search\/preset_words\?/.test(magicJS.request.url):
                 try {
                     if (!!magicJS.response.body) {
-                        magicJS.logDebug(`预置关键字返回：${magicJS.response.body}`);
+                        magicJS.logInfo(`预置关键字返回：${magicJS.response.body}`);
                         let obj = JSON.parse(magicJS.response.body);
                         if (obj.hasOwnProperty('preset_words') && obj['preset_words']['words']) {
                             let words = obj['preset_words']['words'].filter((element) => {
