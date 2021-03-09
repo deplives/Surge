@@ -1,5 +1,5 @@
-#!name=Advertising
-#!desc=Advertising
+#!name=广告拦截
+#!desc=通用广告拦截模块
 
 
 [Rule]
