@@ -118,7 +118,6 @@ let magicJS = MagicJS(scriptName, "INFO");
                 try {
                     let obj = JSON.parse(magicJS.response.body);
                     let data = [];
-                    // 修正由于JS number类型精度问题，导致JSON.parse精度丢失，引起想法不存在的问题
                     const targetIdFix = (element) => {
                         if (element['target_type'] == 'pin') {
                             target_id = element['target']['url'].match(/https?:\/\/www\.zhihu\.com\/pin\/(\d*)/)[1];
