@@ -2,7 +2,4 @@
 #!desc=华硕路由器模块
 
 [Host]
-local.router.asus.com = 192.168.50.1
-
-[URL Rewrite]
-^(http|https):\/\/remote\.router\.asus\.com\/ https://deplives.asuscomm.com:8443/ 302
+router.asus.com = 192.168.50.1
