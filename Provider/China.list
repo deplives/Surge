@@ -20,6 +20,9 @@ DOMAIN-SUFFIX, youku.com
 DOMAIN-SUFFIX, xiami.com
 DOMAIN-SUFFIX, xiami.net
 
+DOMAIN-SUFFIX, battle.net
+DOMAIN-SUFFIX, blizzard.com
+
 DOMAIN-SUFFIX, baidu.com
 DOMAIN-SUFFIX, baidubcr.com
 DOMAIN-SUFFIX, baidupan.com
@@ -92,7 +95,6 @@ DOMAIN-SUFFIX, outlook.com
 DOMAIN-SUFFIX, s-microsoft.com
 DOMAIN-SUFFIX, visualstudio.com
 DOMAIN-SUFFIX, windows.com
-DOMAIN-SUFFIX, windowsupdate.com
 
 USER-AGENT, NeteaseMusic*
 USER-AGENT, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
