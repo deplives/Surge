@@ -12,8 +12,6 @@
 ^(http|https):\/\/(www.)?suning\.com\/ https://suning.com/ 302
 ^(http|https):\/\/(www.)?yhd\.com\/ https://yhd.com/ 302
 
-^http:\/\/t\.cn http://sinaurl.cn 302
-
 ^(http|https):\/\/(www.)?ign\.xn--fiqs8s\/ http://cn.ign.com/ccpref/us 302
 ^(http|https):\/\/(www.)?abbyychina\.com\/ https://www.abbyy.cn/ 302
 ^(http|https):\/\/(www.)?bartender\.cc\/ https://www.macbartender.com/ 302
