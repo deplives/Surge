@@ -1,5 +1,0 @@
-#!name=华硕路由器
-#!desc=华硕路由器模块
-
-[Host]
-router.asus.com = 192.168.50.1
