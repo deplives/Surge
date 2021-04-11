@@ -1,5 +1,5 @@
 /*
-微博开屏广告 = type=http-response,requires-body=true,max-size=false,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Launch.js,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
+微博开屏广告 = type=http-response,requires-body=true,max-size=false,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Launch.js
 */
 
 
