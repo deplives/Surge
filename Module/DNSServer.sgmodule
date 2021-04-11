@@ -4,7 +4,3 @@
 
 [General]
 dns-server = 119.29.29.29, system
-
-
-[Host]
-router.asus.com = server:192.168.50.1
