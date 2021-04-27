@@ -25,4 +25,5 @@ if (url.indexOf(path_wbpullad) != -1) {
     body = JSON.stringify(obj);
 }
 
+console.log("[微博开屏广告] 运行成功")
 $done({body});

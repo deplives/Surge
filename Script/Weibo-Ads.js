@@ -1,5 +1,5 @@
 /*
-微博应用广告 = type=http-response,requires-body=true,max-size=false,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count),script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Ads.js
+微博广告 = type=http-response,requires-body=true,max-size=false,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count),script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/Weibo-Ads.js
 */
 
 
@@ -206,4 +206,5 @@ if (
     }
 }
 
+console.log("[微博广告] 运行成功")
 $done({body});

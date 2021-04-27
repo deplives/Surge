@@ -9,4 +9,5 @@ var data = {
     }
 };
 
+console.log("[微信广告] 运行成功");
 $done({response: data});
