@@ -23,7 +23,7 @@ function weather() {
                 var hourly = [hourly1, hourly2, hourly3].join("\n");
                 let wmation = [title, subtitle, hourly];
                 console.log("[天气预报] 查询成功");
-                console.log("[天气预报] " + obj);
+                console.log("[天气预报] " + data);
                 $notification.post(wmation[0], wmation[1], wmation[2]);
             } else {
                 console.log("[天气预报] 请求失败");
