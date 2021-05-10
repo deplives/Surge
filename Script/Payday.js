@@ -70,5 +70,4 @@ if (DiffDay(Today(), NextDay()) == 0) {
 
 $notification.post(title, subtitle, detail);
 
-console.log("[薪资日] 运行成功")
 $done({});

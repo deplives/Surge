@@ -26,5 +26,4 @@ if (body.hasOwnProperty('data')) {
 }
 body = JSON.stringify(body)
 
-console.log("[Bilibili 开屏广告] 运行成功")
 $done({ body })

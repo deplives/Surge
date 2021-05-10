@@ -22,8 +22,6 @@ function weather() {
                 var hourly3 = dateformater(obj["hourly"][2]["fxTime"]) + "\t" + obj["hourly"][2]["text"] + " | " + obj["hourly"][2]["temp"] + " ℃" + " | " + obj["hourly"][2]["windDir"] + " " + obj["hourly"][2]["windScale"] + "级" + " | " + "降水量: " + obj["hourly"][2]["precip"] + "mm";
                 var hourly = [hourly1, hourly2, hourly3].join("\n");
                 let wmation = [title, subtitle, hourly];
-                console.log("[天气预报] 查询成功");
-                console.log("[天气预报] " + data);
                 $notification.post(wmation[0], wmation[1], wmation[2]);
             } else {
                 console.log("[天气预报] 请求失败");

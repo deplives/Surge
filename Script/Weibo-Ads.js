@@ -206,5 +206,4 @@ if (
     }
 }
 
-console.log("[微博广告] 运行成功")
 $done({body});
