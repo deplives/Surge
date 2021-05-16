@@ -1,6 +1,0 @@
-#!name=DNS服务
-#!desc=DNS服务
-
-
-[General]
-dns-server = 119.29.29.29, system
