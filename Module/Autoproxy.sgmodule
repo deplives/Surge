@@ -1,0 +1,5 @@
+#!name=自动切换代理
+#!desc=macOS自动切换代理
+
+[Script]
+自动切换代理模式 = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/deplives/Surge/master/Script/AutoProxy.js
