@@ -23,8 +23,8 @@ if (wifiChanged()) {
 }
 
 function wifiChanged() {
-    const currentWifiSSid = $persistentStore.read('current_wifi_ssid');
-    const changed = currentWifiSSid !== $network.wifi.ssid;
+    const currentWifissid = $persistentStore.read('current_wifi_ssid');
+    const changed = currentWifissid !== $network.wifi.ssid;
     if (changed) {
         $persistentStore.write($network.wifi.ssid, 'current_wifi_ssid');
     }
