@@ -31,6 +31,7 @@ URL-REGEX, ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start, reject-
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
 ^https?:\/\/intl\.iqiyi\.com\/ad_external\/ - reject
 ^https?:\/\/intl\.iqiyi\.com\/video\/advertise - reject
+^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - reject
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject
 ^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
