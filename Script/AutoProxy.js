@@ -9,7 +9,7 @@ if (wifiChanged()) {
         $notification.post(
             'Surge',
             `Wi-Fi ${$network.wifi.ssid}`,
-            '将使用直连模式'
+            '将使用直接连接模式'
         );
     } else {
         $surge.setSelectGroupPolicy('Final-select', 'Group');
@@ -17,7 +17,7 @@ if (wifiChanged()) {
         $notification.post(
             'Surge',
             `Wi-Fi ${$network.wifi.ssid}`,
-            '将使用代理模式'
+            '将使用规则判定模式'
         );
     }
 }
